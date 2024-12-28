@@ -203,7 +203,7 @@
     {
         "id": "1092dc46790792d6",
         "type": "ui_tab",
-        "name": "Script",
+        "name": "Log In",
         "icon": "dashboard",
         "order": 1,
         "disabled": false,
@@ -221,11 +221,11 @@
     {
         "id": "add1faeab873f5bb",
         "type": "ui_tab",
-        "name": "Log out",
+        "name": "Log Out",
         "icon": "dashboard",
-        "order": 4,
+        "order": 7,
         "disabled": false,
-        "hidden": false
+        "hidden": true
     },
     {
         "id": "38c418ea4142ccd8",
@@ -234,7 +234,7 @@
         "icon": "dashboard",
         "order": 5,
         "disabled": false,
-        "hidden": false
+        "hidden": true
     },
     {
         "id": "1987fbbdac4ac140",
@@ -243,7 +243,7 @@
         "icon": "dashboard",
         "order": 6,
         "disabled": false,
-        "hidden": false
+        "hidden": true
     },
     {
         "id": "506de255854d948c",
@@ -315,9 +315,9 @@
         "type": "ui_tab",
         "name": "Charts",
         "icon": "dashboard",
-        "order": 3,
+        "order": 4,
         "disabled": false,
-        "hidden": false
+        "hidden": true
     },
     {
         "id": "04229a24935bb99a",
@@ -335,8 +335,9 @@
         "type": "ui_tab",
         "name": "Script",
         "icon": "dashboard",
+        "order": 8,
         "disabled": false,
-        "hidden": false
+        "hidden": true
     },
     {
         "id": "fe991fbbebceaa63",
@@ -781,8 +782,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 745,
-        "y": 1259.9999961853027,
+        "x": 720,
+        "y": 1220,
         "wires": [
             [
                 "5af1e10758326e03",
@@ -802,8 +803,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1015,
-        "y": 1259.9999961853027,
+        "x": 1050,
+        "y": 1240,
         "wires": [
             [
                 "173fd6e4ac6824c4"
@@ -1957,24 +1958,8 @@
         "type": "ui_ui_control",
         "z": "c4d0c67915ccb15e",
         "name": "",
-        "x": 740,
-        "y": 1100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "030baa63e035f70f",
-        "type": "ui_button",
-        "z": "c4d0c67915ccb15e",
-        "name": "",
-        "group": "506de255854d948c",
-        "order": 3,
-        "width": 6,
-        "height": "4",
-        "topic": "",
-        "x": 690,
-        "y": 1300,
+        "x": 760,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -2007,116 +1992,6 @@
         ]
     },
     {
-        "id": "a5edfb7ae190806f",
-        "type": "ui_text_input",
-        "z": "c4d0c67915ccb15e",
-        "name": "",
-        "label": "User Name",
-        "tooltip": "",
-        "group": "506de255854d948c",
-        "order": 1,
-        "width": 6,
-        "height": 1,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "login",
-        "topicType": "msg",
-        "x": 270,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2c74de7cd0b5fed8",
-        "type": "ui_text_input",
-        "z": "c4d0c67915ccb15e",
-        "name": "",
-        "label": "Password",
-        "tooltip": "",
-        "group": "506de255854d948c",
-        "order": 2,
-        "width": 6,
-        "height": 1,
-        "passthru": true,
-        "mode": "password",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 260,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4f9d886706c21dc2",
-        "type": "ui_button",
-        "z": "c4d0c67915ccb15e",
-        "name": "",
-        "group": "506de255854d948c",
-        "width": "",
-        "height": "",
-        "passthru": false,
-        "label": "",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 950,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "62e6c8e41318ed99",
-        "type": "ui_ui_control",
-        "z": "c4d0c67915ccb15e",
-        "name": "",
-        "x": 250,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "51072983b7ba2ee0",
-        "type": "ui_button",
-        "z": "c4d0c67915ccb15e",
-        "name": "",
-        "group": "f0d047bca5f32611",
-        "order": 3,
-        "width": 6,
-        "height": 1,
-        "passthru": false,
-        "label": "Sign Up",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 240,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "d8330af53d1f39fa",
         "type": "mysql",
         "z": "c4d0c67915ccb15e",
@@ -2131,31 +2006,6 @@
         ]
     },
     {
-        "id": "650a51b4e0f2e4aa",
-        "type": "change",
-        "z": "c4d0c67915ccb15e",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 340,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "42a15b12e2c164c3",
         "type": "debug",
         "z": "c4d0c67915ccb15e",
@@ -2164,123 +2014,13 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 880,
         "y": 180,
         "wires": []
-    },
-    {
-        "id": "4be78e76d2696a4d",
-        "type": "ui_button",
-        "z": "c4d0c67915ccb15e",
-        "name": "",
-        "group": "f0d047bca5f32611",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Sign In",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 80,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "df3b8a118cdab206",
-        "type": "ui_text_input",
-        "z": "c4d0c67915ccb15e",
-        "name": "",
-        "label": "User Name",
-        "tooltip": "",
-        "group": "f0d047bca5f32611",
-        "order": 1,
-        "width": "6",
-        "height": "1",
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "userName",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "str",
-        "x": 90,
-        "y": 100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "71ade9357a5df070",
-        "type": "ui_text_input",
-        "z": "c4d0c67915ccb15e",
-        "name": "",
-        "label": "Password",
-        "tooltip": "",
-        "group": "f0d047bca5f32611",
-        "order": 2,
-        "width": "6",
-        "height": "1",
-        "passthru": true,
-        "mode": "password",
-        "delay": 300,
-        "topic": "pass",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "str",
-        "x": 80,
-        "y": 160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b6e4508264098a08",
-        "type": "ui_button",
-        "z": "c4d0c67915ccb15e",
-        "name": "",
-        "group": "506de255854d948c",
-        "width": "",
-        "height": "",
-        "passthru": false,
-        "label": "",
-        "tooltip": "",
-        "color": "red",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 70,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f784af9c6ec11c36",
-        "type": "ui_ui_control",
-        "z": "c4d0c67915ccb15e",
-        "name": "",
-        "events": "all",
-        "x": 800,
-        "y": 240,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "e6b2a17ef18f5e8c",
@@ -2298,7 +2038,7 @@
         "persistence_bind": "memory",
         "dburl": "",
         "usetls": false,
-        "x": 450,
+        "x": 350,
         "y": 220,
         "wires": [
             [],
@@ -2349,8 +2089,8 @@
         "columns": [],
         "outputs": 1,
         "cts": true,
-        "x": 475,
-        "y": 1259.9999961853027,
+        "x": 470,
+        "y": 1220,
         "wires": [
             [
                 "cad4c286614c2c39"
@@ -2371,6 +2111,18 @@
         "cts": true,
         "x": 1910,
         "y": 2400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f784af9c6ec11c36",
+        "type": "ui_ui_control",
+        "z": "c4d0c67915ccb15e",
+        "name": "",
+        "events": "all",
+        "x": 800,
+        "y": 240,
         "wires": [
             []
         ]
@@ -2695,7 +2447,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tab\":\"Sign Up\"}",
+                "to": "{\"tab\":\"Log In\"}",
                 "tot": "json"
             }
         ],
@@ -2704,10 +2456,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 500,
+        "x": 280,
         "y": 400,
         "wires": [
-            []
+            [
+                "5686e045a6bdbdb4"
+            ]
         ]
     },
     {
@@ -2822,7 +2576,8 @@
             [
                 "b702066ca4cc149a",
                 "236d9a64b4ea64ef",
-                "b79f4cfb86a86e4b"
+                "b79f4cfb86a86e4b",
+                "79108d898ab491d7"
             ],
             [
                 "9d9653e1f9a99b77"
@@ -2844,7 +2599,7 @@
         "className": "",
         "topic": "Login Success",
         "name": "",
-        "x": 970,
+        "x": 1040,
         "y": 120,
         "wires": []
     },
@@ -2863,7 +2618,7 @@
         "className": "",
         "topic": "Wrong user or password",
         "name": "",
-        "x": 990,
+        "x": 1010,
         "y": 200,
         "wires": []
     },
@@ -2877,7 +2632,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tabs\":{\"show\":[\"Log out\",\"Time scheduler\",\"Remote\",\"Charts\"]}}",
+                "to": "{\"tabs\":{\"show\":[\"Home\", \"Script\" ,\"Log Out\",\"Time scheduler\",\"Remote\",\"Charts\"]}}",
                 "tot": "json"
             }
         ],
@@ -2889,7 +2644,9 @@
         "x": 960,
         "y": 360,
         "wires": [
-            []
+            [
+                "54104700a405a460"
+            ]
         ]
     },
     {
@@ -2902,7 +2659,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tabs\":{\"hide\":[\"Login\", \"Sign Up\"]}}",
+                "to": "{\"tabs\":{\"hide\":[\"Sign Up\", \"Log In\"]}}",
                 "tot": "json"
             }
         ],
@@ -2914,7 +2671,194 @@
         "x": 960,
         "y": 440,
         "wires": [
+            [
+                "54104700a405a460"
+            ]
+        ]
+    },
+    {
+        "id": "49d867da97a51eef",
+        "type": "ui_button",
+        "z": "c1cbdaa6a3f38f38",
+        "name": "",
+        "group": "506de255854d948c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Login",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "8343b1dc7815cfb3"
+            ]
+        ]
+    },
+    {
+        "id": "e7ddd57d91cae8c1",
+        "type": "ui_text_input",
+        "z": "c1cbdaa6a3f38f38",
+        "name": "",
+        "label": "User Name",
+        "tooltip": "",
+        "group": "506de255854d948c",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "userName",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "9c751e69e4ccf098"
+            ]
+        ]
+    },
+    {
+        "id": "ab06c70c186e61a9",
+        "type": "ui_text_input",
+        "z": "c1cbdaa6a3f38f38",
+        "name": "",
+        "label": "Password",
+        "tooltip": "",
+        "group": "506de255854d948c",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "password",
+        "delay": 300,
+        "topic": "pass",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "fbb12d41cce2c181"
+            ]
+        ]
+    },
+    {
+        "id": "39af3266228f30da",
+        "type": "ui_button",
+        "z": "c1cbdaa6a3f38f38",
+        "name": "",
+        "group": "506de255854d948c",
+        "width": "",
+        "height": "",
+        "passthru": false,
+        "label": "Sign Up",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 80,
+        "y": 520,
+        "wires": [
+            [
+                "b20fb10022497ae1"
+            ]
+        ]
+    },
+    {
+        "id": "b20fb10022497ae1",
+        "type": "change",
+        "z": "c1cbdaa6a3f38f38",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\": \"Sign Up\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 520,
+        "wires": [
+            [
+                "5b50ba7fadf8c88f"
+            ]
+        ]
+    },
+    {
+        "id": "5b50ba7fadf8c88f",
+        "type": "ui_ui_control",
+        "z": "c1cbdaa6a3f38f38",
+        "name": "Change to Sign Up",
+        "events": "change",
+        "x": 630,
+        "y": 520,
+        "wires": [
             []
+        ]
+    },
+    {
+        "id": "54104700a405a460",
+        "type": "ui_ui_control",
+        "z": "c1cbdaa6a3f38f38",
+        "name": "Hidden Log In",
+        "events": "change",
+        "x": 1320,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "79108d898ab491d7",
+        "type": "change",
+        "z": "c1cbdaa6a3f38f38",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"Charts\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 520,
+        "wires": [
+            [
+                "54104700a405a460"
+            ]
         ]
     },
     {
@@ -2979,7 +2923,7 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Sign In",
+        "label": "Sign Up",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -3016,17 +2960,19 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
+        "x": 420,
         "y": 320,
         "wires": [
-            []
+            [
+                "88da970b171034d3"
+            ]
         ]
     },
     {
         "id": "88da970b171034d3",
         "type": "function",
         "z": "403d1237864cacc4",
-        "name": "function 1",
+        "name": "Sign Up",
         "func": "var query = `SELECT createUser('${flow.get(\"userName\")}', '${flow.get(\"password\")}') AS result`;\nmsg.topic = query;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -3034,10 +2980,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
+        "x": 620,
         "y": 260,
         "wires": [
-            []
+            [
+                "5f264a542be9c9bf"
+            ]
         ]
     },
     {
@@ -3106,6 +3054,85 @@
         "x": 880,
         "y": 180,
         "wires": []
+    },
+    {
+        "id": "5f264a542be9c9bf",
+        "type": "mysql",
+        "z": "403d1237864cacc4",
+        "mydb": "e7f976d3ee444ce1",
+        "name": "DB",
+        "x": 810,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ac680bef93df5fc7",
+        "type": "ui_button",
+        "z": "403d1237864cacc4",
+        "name": "",
+        "group": "f0d047bca5f32611",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Sign In",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 80,
+        "y": 400,
+        "wires": [
+            [
+                "0de59e884c12e237"
+            ]
+        ]
+    },
+    {
+        "id": "8ef526d926b33156",
+        "type": "ui_ui_control",
+        "z": "403d1237864cacc4",
+        "name": "Change to Sign Up",
+        "events": "change",
+        "x": 570,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0de59e884c12e237",
+        "type": "change",
+        "z": "403d1237864cacc4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\": \"Log In\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 440,
+        "wires": [
+            [
+                "8ef526d926b33156"
+            ]
+        ]
     },
     {
         "id": "6cbdeceba483d41c",
@@ -3364,7 +3391,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tabs\":{\"show\":[\"Login\", \"Sign Up\"]}}",
+                "to": "{\"tabs\":{\"show\":[\"Log In\", \"Sign Up\"]}}",
                 "tot": "json"
             }
         ],
@@ -3376,32 +3403,9 @@
         "x": 500,
         "y": 240,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "be70b4606bed9de1",
-        "type": "change",
-        "z": "b10b07ba34052eb5",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tab\":\"Login\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 300,
-        "wires": [
-            []
+            [
+                "5cd70a0873a723f3"
+            ]
         ]
     },
     {
@@ -3414,7 +3418,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tabs\":{\"hide\":[\"Charts\",\"Log out\",\"Time scheduler\",\"Remote\"]}}",
+                "to": "{\"tabs\":{\"hide\":[\"Charts\",\"Log out\",\"Time scheduler\",\"Remote\",\"Script\"]}}",
                 "tot": "json"
             }
         ],
@@ -3424,9 +3428,11 @@
         "to": "",
         "reg": false,
         "x": 500,
-        "y": 360,
+        "y": 460,
         "wires": [
-            []
+            [
+                "5cd70a0873a723f3"
+            ]
         ]
     },
     {
@@ -3448,8 +3454,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 520,
-        "y": 440,
+        "x": 500,
+        "y": 520,
         "wires": [
             [
                 "94c434a4ad9535c9"
@@ -3472,6 +3478,75 @@
         "x": 810,
         "y": 440,
         "wires": []
+    },
+    {
+        "id": "5cd70a0873a723f3",
+        "type": "ui_ui_control",
+        "z": "b10b07ba34052eb5",
+        "name": "Change to Log in",
+        "events": "change",
+        "x": 790,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5184f164f8b13892",
+        "type": "ui_button",
+        "z": "b10b07ba34052eb5",
+        "name": "",
+        "group": "41226fd164ba85b2",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Log Out",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 180,
+        "y": 340,
+        "wires": [
+            [
+                "024ca79ae49dc492",
+                "a14fc4afcad12271",
+                "5cbeeefc0e950e0a"
+            ]
+        ]
+    },
+    {
+        "id": "5cbeeefc0e950e0a",
+        "type": "change",
+        "z": "b10b07ba34052eb5",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\": \"Log In\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 120,
+        "wires": [
+            [
+                "5cd70a0873a723f3"
+            ]
+        ]
     },
     {
         "id": "37cb8d0c798f47e4",
