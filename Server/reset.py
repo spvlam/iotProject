@@ -24,7 +24,8 @@ mysql_host = "172.17.0.1"
 mysql_user = "root"
 mysql_password = "123456"
 mysql_database = "iotdb"
-mysql_script_path = "Server/database.sql"
+# mysql_script_path = "Server/database.sql"
+mysql_script_path = "Server/insert.sql"
 
 execute_mysql_script(mysql_host, mysql_user, mysql_password, mysql_database, mysql_script_path)
 
