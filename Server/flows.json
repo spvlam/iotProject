@@ -67,7 +67,7 @@
         "id": "a78910a7de187960",
         "type": "mqtt-broker",
         "name": "Local Server",
-        "broker": "192.168.1.35",
+        "broker": "192.168.43.44",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
@@ -2195,7 +2195,7 @@
         "seg2": "60",
         "diff": false,
         "className": "",
-        "x": 1250,
+        "x": 1030,
         "y": 560,
         "wires": []
     },
@@ -2212,11 +2212,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 710,
+        "x": 770,
         "y": 560,
         "wires": [
             [
-                "d4c001c80121369f"
+                "d4c001c80121369f",
+                "82a96dc9e8381874"
             ]
         ]
     },
@@ -2331,39 +2332,11 @@
         ]
     },
     {
-        "id": "fbbab321075a5738",
-        "type": "change",
-        "z": "07c88e5ee81fcd05",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "chose",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 200,
-        "y": 560,
-        "wires": [
-            [
-                "594adfc4e5a368f6",
-                "aeef80e3f1ac7696"
-            ]
-        ]
-    },
-    {
         "id": "594adfc4e5a368f6",
         "type": "function",
         "z": "07c88e5ee81fcd05",
         "name": "set topic temperature",
-        "func": "msg.action = \"subscribe\";\nmsg.topic = `${flow.get(\"chose\").Id}\\\\TEMPERATURE`;\nreturn msg;",
+        "func": "msg.action = \"subscribe\";\nmsg.topic = `${flow.get(\"chose\").Id}\\\\TEMPERATURE`;\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2411,10 +2384,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 610,
+        "x": 670,
         "y": 760,
         "wires": [
-            []
+            [
+                "11b53f59c265027f"
+            ]
         ]
     },
     {
@@ -2436,6 +2411,51 @@
                 "fbbab321075a5738"
             ]
         ]
+    },
+    {
+        "id": "fbbab321075a5738",
+        "type": "change",
+        "z": "07c88e5ee81fcd05",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "chose",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 560,
+        "wires": [
+            [
+                "594adfc4e5a368f6",
+                "aeef80e3f1ac7696"
+            ]
+        ]
+    },
+    {
+        "id": "82a96dc9e8381874",
+        "type": "debug",
+        "z": "07c88e5ee81fcd05",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 640,
+        "wires": []
     },
     {
         "id": "8343b1dc7815cfb3",
@@ -3602,7 +3622,9 @@
         "x": 660,
         "y": 260,
         "wires": [
-            []
+            [
+                "ab7148bf42f5081c"
+            ]
         ]
     },
     {
@@ -3648,5 +3670,97 @@
         "x": 1070,
         "y": 180,
         "wires": []
+    },
+    {
+        "id": "ce28c6e0b040f8ae",
+        "type": "mqtt in",
+        "z": "3accd8f23e4a4ef8",
+        "name": "",
+        "topic": "",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "a78910a7de187960",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "65be5d3c32d087e2"
+            ]
+        ]
+    },
+    {
+        "id": "38736c64e16680c8",
+        "type": "function",
+        "z": "3accd8f23e4a4ef8",
+        "name": "function 1",
+        "func": "// Extract data from the incoming MQTT message\nlet sequenceID = msg.payload.sequenceID; // Unique sequence ID\nlet date = msg.payload.date;             // Timestamp\nlet dsID = msg.payload.dsID;             // Sensor ID\nlet temperature = msg.payload.temperature; // Temperature value\nlet equipmentID = msg.payload.equipmentID; // Associated equipment ID\n\n// SQL query for inserting into DS_Temperature table\nlet sqlQuery = `\n  INSERT INTO DS_Temperature (sequenceID, date, dsID, temperature, equipmentID)\n  VALUES (?, ?, ?, ?, ?)\n`;\n\n// Attach the query and parameters to the message\nmsg.topic = sqlQuery;\nmsg.payload = [sequenceID, date, dsID, temperature, equipmentID];\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 460,
+        "wires": [
+            [
+                "f95e15f95eb5e162"
+            ]
+        ]
+    },
+    {
+        "id": "f95e15f95eb5e162",
+        "type": "mysql",
+        "z": "3accd8f23e4a4ef8",
+        "mydb": "e7f976d3ee444ce1",
+        "name": "",
+        "x": 870,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "65be5d3c32d087e2",
+        "type": "change",
+        "z": "3accd8f23e4a4ef8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 460,
+        "wires": [
+            [
+                "38736c64e16680c8"
+            ]
+        ]
+    },
+    {
+        "id": "ab7148bf42f5081c",
+        "type": "mysql",
+        "z": "3accd8f23e4a4ef8",
+        "mydb": "e7f976d3ee444ce1",
+        "name": "",
+        "x": 950,
+        "y": 280,
+        "wires": [
+            []
+        ]
     }
 ]

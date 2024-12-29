@@ -28,7 +28,7 @@ const int r2 = D2;
 const int OutPin = A0;
 char ssid[64];
 char pass[64];
-const char mqtt_sever[] = "192.168.50.72";
+const char mqtt_sever[] = "192.168.43.44";
 const int port = 1883;
 String userName = "";
 String socket1 = "Socket_1";
